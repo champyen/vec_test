@@ -28,12 +28,10 @@ int main(void)
         vec4.emplace_back(rand());
     }
 
-    // if the next 3 lines are commented out, Pss value of each process will increase.
-    /*
+    // if the next 3 lines are commented out, Pss value of each process will decrease.
     vector<uint64_t>().swap(vec1);
     vector<vector<uint64_t>>().swap(vec2);
     vector<pair<uint64_t, uint64_t>>().swap(vec3);
-    */
 
     printf("Before fork[%d] %u KB\n", getpid(), getpss(getpid()));
 
