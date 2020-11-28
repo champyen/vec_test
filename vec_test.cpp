@@ -46,9 +46,12 @@ int main(void)
 
     // if the next 3 lines are commented out, Pss value of each process will decrease.
     #if 1
-    vector<uint64_t>().swap(vec1);
-    vector<vector<uint64_t>>().swap(vec2);
-    vector<pair<uint64_t, uint64_t>>().swap(vec3);
+    //vector<uint64_t>().swap(vec1);
+    //vector<vector<uint64_t>>().swap(vec2);
+    //vector<pair<uint64_t, uint64_t>>().swap(vec3);
+    vec1.shrink_to_fit();
+    vec2.shrink_to_fit();
+    vec3.shrink_to_fit();
     #endif
 
     printf("Before fork[%d] %u KB\n", getpid(), getpss(getpid()));
